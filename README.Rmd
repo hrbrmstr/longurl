@@ -16,9 +16,6 @@ knitr::opts_chunk$set(
 ![](longurl.png)
 
 [![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) 
-<!-- ![Project Status: Concept - Minimal or no implementation has been done yet.](http://www.repostatus.org/badges/0.1.0/concept.svg)](http://www.repostatus.org/#concept) -->
-<!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/longurl) 
-<!-- ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl) -->
 
 longurl : Expand Short URLs using the 'LongURL' API
 

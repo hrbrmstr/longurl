@@ -1,8 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ![](longurl.png)
 
-[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) <!-- ![Project Status: Concept - Minimal or no implementation has been done yet.](http://www.repostatus.org/badges/0.1.0/concept.svg)](http://www.repostatus.org/#concept) --> <!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/longurl) 
-<!-- ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl) -->
+[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl)
 
 longurl : Expand Short URLs using the 'LongURL' API
 
@@ -81,7 +80,7 @@ library(longurl)
 library(testthat)
 
 date()
-#> [1] "Tue Jun 23 11:40:56 2015"
+#> [1] "Tue Jun 23 11:42:36 2015"
 
 test_dir("tests/")
 #> basic functionality : ..
