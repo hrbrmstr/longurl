@@ -1,12 +1,15 @@
-# the longurl api requires the use of a custom user agent
+# the LongURL api requires the use of a custom user agent
 LONGURL_USER_AGENT <- "longurl-rstats-pkg"
 
-# this is the base endpoint for the longurl API
+# this is the base endpoint for the LongURL API
 LONGURL_ENDPOINT <- "http://api.longurl.org/v2/%s"
 
-#' Retrieve all the URL shortener services known to the longurl API
+#' Retrieve all the URL shortener services known to the 'LongURL' API
 #'
 #' @export
+#' @return \code{data_frame} (compatible with \code{data.frame}) of results
+#'        with the the short URL TLD in \code{tld} and a regular expression
+#'        of compatible URLs in \code{regex})
 #' @examples
 #' short_svcs <- known_services()
 #' head(short_svcs)
@@ -29,7 +32,8 @@ known_services <- function() {
 #' Expand a vector of (short) URLs using the longurl service
 #'
 #' Pass in a vector of URLs (ostensibly "short" URLs) and receive
-#' a \code{data_frame} of the original URLs and expanded URLs.
+#' a \code{data_frame} of the original URLs and expanded URLs via the
+#' 'LongURL' service.
 #'
 #' @param urls_to_expand character vector of URLs
 #' @param check run an extra \code{HEAD} request on the expanded URL to determine

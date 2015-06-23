@@ -26,7 +26,8 @@ interactive sesions)}
 }
 \description{
 Pass in a vector of URLs (ostensibly "short" URLs) and receive
-a \code{data_frame} of the original URLs and expanded URLs.
+a \code{data_frame} of the original URLs and expanded URLs via the
+'LongURL' service.
 }
 \examples{
 test_urls <- c("http://t.co/D4C7aWYIiA",
