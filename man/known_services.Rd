@@ -2,12 +2,17 @@
 % Please edit documentation in R/longurl.r
 \name{known_services}
 \alias{known_services}
-\title{Retrieve all the URL shortener services known to the longurl API}
+\title{Retrieve all the URL shortener services known to the 'LongURL' API}
 \usage{
 known_services()
 }
+\value{
+\code{data_frame} (compatible with \code{data.frame}) of results
+       with the the short URL TLD in \code{tld} and a regular expression
+       of compatible URLs in \code{regex})
+}
 \description{
-Retrieve all the URL shortener services known to the longurl API
+Retrieve all the URL shortener services known to the 'LongURL' API
 }
 \examples{
 short_svcs <- known_services()

@@ -49,7 +49,7 @@ library(dplyr)
 
 # current verison
 packageVersion("longurl")
-#> [1] '0.0.0.9000'
+#> [1] '0.1.0'
 
 test_urls <- c("http://t.co/D4C7aWYIiA",
                "1.usa.gov/1J6GNoW",
@@ -80,7 +80,7 @@ library(longurl)
 library(testthat)
 
 date()
-#> [1] "Tue Jun 23 11:42:36 2015"
+#> [1] "Tue Jun 23 17:47:49 2015"
 
 test_dir("tests/")
 #> basic functionality : ..

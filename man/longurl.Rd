@@ -4,9 +4,11 @@
 \name{longurl}
 \alias{longurl}
 \alias{longurl-package}
-\title{A package to work with the longurl API}
+\title{A package to work with the LongURL API}
 \description{
-A package to work with the longurl API
+Interface to the 'LongURL' API to identify known URL shortener services
+and expand vectors of short URLs with optional error checking and
+URL validation.
 }
 \author{
 Bob Rudis (@hrbrmstr)
