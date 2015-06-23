@@ -1,8 +1,11 @@
 Package: longurl
-Title: What the Package Does (one line, title case)
+Title: Expand Short URLs using the 'LongURL' API
 Version: 0.0.0.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: What the package does (one paragraph).
+Description: Interface to the 'LongURL' API to identify known URL shortener services
+             and expand vectors of short URLs.
 Depends: R (>= 3.2.1)
 License: MIT + file LICENSE
 LazyData: true
+Suggests: testthat
+Imports: httr, dplyr, pbapply
