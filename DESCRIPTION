@@ -1,6 +1,6 @@
 Package: longurl
 Title: Expand Short URLs Using the 'LongURL' API
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
 Description: Interface to the 'LongURL' API to identify known URL shortener services
              and expand vectors of short URLs with optional error checking and
