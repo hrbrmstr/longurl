@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ![](longurl.png)
 
-[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl)
+[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/metricsgraphics) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
 
 longurl : Expand Short URLs using the 'LongURL' API
 
@@ -24,11 +24,14 @@ The following data sets are included:
 ### News
 
 -   Version `0.0.0.9000` released
+-   Version `0.1.0` released ([CRAN](http://cran.r-project.org/web/packages/longurl/index.html)) ([GitHub](https://github.com/hrbrmstr/longurl/archive/v0.1.0.zip))
 
 ### Installation
 
 ``` r
 devtools::install_github("hrbrmstr/longurl")
+# OR
+install.packages("longurl")
 ```
 
 ### Usage
@@ -49,7 +52,7 @@ library(dplyr)
 
 # current verison
 packageVersion("longurl")
-#> [1] '0.1.0'
+#> [1] '0.1.0.9999'
 
 test_urls <- c("http://t.co/D4C7aWYIiA",
                "1.usa.gov/1J6GNoW",
@@ -80,7 +83,7 @@ library(longurl)
 library(testthat)
 
 date()
-#> [1] "Tue Jun 23 17:47:49 2015"
+#> [1] "Tue Jun 23 20:47:35 2015"
 
 test_dir("tests/")
 #> basic functionality : ..

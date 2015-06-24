@@ -16,6 +16,10 @@ knitr::opts_chunk$set(
 ![](longurl.png)
 
 [![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/metricsgraphics) 
+![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
+
 
 longurl : Expand Short URLs using the 'LongURL' API
 
@@ -38,11 +42,14 @@ The following data sets are included:
 ### News
 
 - Version `0.0.0.9000` released
+- Version `0.1.0` released ([CRAN](http://cran.r-project.org/web/packages/longurl/index.html)) ([GitHub](https://github.com/hrbrmstr/longurl/archive/v0.1.0.zip))
 
 ### Installation
 
 ```{r install, eval=FALSE}
 devtools::install_github("hrbrmstr/longurl")
+# OR
+install.packages("longurl")
 ```
 
 ```{r options_2, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
