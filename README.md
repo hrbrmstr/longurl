@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ![](longurl.png)
 
-[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/metricsgraphics) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
+[![Build Status](https://travis-ci.org/hrbrmstr/longurl.svg)](https://travis-ci.org/hrbrmstr/longurl) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/longurl)](http://cran.r-project.org/web/packages/longurl) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
 
 longurl : Expand Short URLs using the 'LongURL' API
 
@@ -83,10 +83,12 @@ library(longurl)
 library(testthat)
 
 date()
-#> [1] "Tue Jun 23 20:47:35 2015"
+#> [1] "Wed Jul  1 19:22:19 2015"
 
 test_dir("tests/")
 #> basic functionality : ..
+#> 
+#> You are a coding rockstar!
 ```
 
 ### Code of Conduct
