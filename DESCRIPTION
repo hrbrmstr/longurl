@@ -1,10 +1,11 @@
 Package: longurl
 Title: Expand Short URLs Using the 'URL-Expander' API
 Version: 0.2.0
-Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
+Authors@R: c(person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")))
 Description: Interface to the 'URL-Expander' API to expand vectors of short URLs
     with optional error checking and URL validation. See <http://urlex.org/> for
     more information about their service.
+Maintainer: Bob Rudis <bob@rud.is>
 Depends:
     R (>= 3.1.0)
 License: MIT + file LICENSE
