@@ -7,3 +7,4 @@
 ^README\.md$
 ^longurl\.png$
 ^cran-comments\.md$
+^revdep$
