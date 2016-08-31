@@ -1,7 +1,5 @@
 ---
-output:
-  md_document:
-    variant: markdown_github
+output: rmarkdown::github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -45,7 +43,7 @@ The following data sets are included:
 
 ### Installation
 
-```{r install, eval=FALSE}
+```{r install, eval=FALSE, message=FALSE, warning=FALSE}
 devtools::install_github("hrbrmstr/longurl")
 # OR
 install.packages("longurl")
@@ -57,7 +55,7 @@ options(width=200)
 
 ### Usage
 
-```{r usage}
+```{r usage, message=FALSE, warning=FALSE}
 library(longurl)
 library(dplyr)
 
@@ -76,7 +74,7 @@ head(expand_urls(test_urls), 2)
 
 ### Test Results
 
-```{r test}
+```{r test, message=FALSE, warning=FALSE}
 library(longurl)
 library(testthat)
 
