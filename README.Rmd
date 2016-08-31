@@ -21,11 +21,10 @@ knitr::opts_chunk$set(
 ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
 
 
-longurl : Expand Short URLs using the 'LongURL' API
+longurl : Expand Short URLs using the 'URL-Expander' API
 
 This does a bit more than [decode_short_url](https://github.com/geoffjentry/twitteR/blob/master/R/utils.R#L22-L31) from the [twitteR](https://github.com/geoffjentry/twitteR) package since it:
 
-- enables you to get a list of what shortening services [longurl](http://longurl.org/) knows about
 - has an option to do a post-expand check with a `HEAD` request to ensure the resource exists (useful when you think longurl just failed to expand)
 - has an option to warn on expansion issues
 - has an option for progress bars
@@ -35,14 +34,14 @@ This does a bit more than [decode_short_url](https://github.com/geoffjentry/twit
 The following functions are implemented:
 
 - `expand_urls`:	Expand a vector of (short) URLs using the longurl service
-- `known_services`:	Retrieve all the URL shortener services known to the longurl API
 
 The following data sets are included:
 
 ### News
 
-- Version `0.0.0.9000` released
+- Version `0.2.0` - See NEWS.md
 - Version `0.1.0` released ([CRAN](http://cran.r-project.org/web/packages/longurl/index.html)) ([GitHub](https://github.com/hrbrmstr/longurl/archive/v0.1.0.zip))
+- Version `0.0.0.9000` released
 
 ### Installation
 
@@ -73,9 +72,6 @@ test_urls <- c("http://t.co/D4C7aWYIiA",
                "http://l.rud.is/seven")
 
 head(expand_urls(test_urls), 2)
-
-svcs <- known_services()
-filter(svcs, regex != "")
 ```
 
 ### Test Results
