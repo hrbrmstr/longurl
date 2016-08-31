@@ -1,13 +1,19 @@
 Package: longurl
-Title: Expand Short URLs Using the 'LongURL' API
-Version: 0.1.0.9000
+Title: Expand Short URLs Using the 'URL-Expander' API
+Version: 0.2.0
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: Interface to the 'LongURL' API to identify known URL shortener services
-             and expand vectors of short URLs with optional error checking and
-             URL validation. See <http://longurl.org/> for more information about
-             'LongURL'.
-Depends: R (>= 3.1.0)
+Description: Interface to the 'URL-Expander' API to expand vectors of short URLs
+    with optional error checking and URL validation. See <http://urlex.org/> for
+    more information about their service.
+Depends:
+    R (>= 3.1.0)
 License: MIT + file LICENSE
 LazyData: true
-Suggests: testthat
-Imports: httr, dplyr, pbapply
+Suggests:
+    testthat
+Imports:
+    httr,
+    dplyr,
+    pbapply,
+    jsonlite
+RoxygenNote: 5.0.1

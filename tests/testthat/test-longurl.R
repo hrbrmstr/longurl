@@ -9,6 +9,5 @@ test_that("the API works", {
     "http://l.rud.is/seven")
 
   expect_that(expand_urls(test_urls), is_a("data.frame"))
-  expect_that(known_services(), is_a("data.frame"))
 
 })
