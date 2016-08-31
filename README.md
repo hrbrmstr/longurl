@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ![](longurl.png)
 
@@ -38,14 +39,6 @@ install.packages("longurl")
 ``` r
 library(longurl)
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
 # current verison
 packageVersion("longurl")
@@ -71,14 +64,9 @@ head(expand_urls(test_urls), 2)
 ``` r
 library(longurl)
 library(testthat)
-#> 
-#> Attaching package: 'testthat'
-#> The following object is masked from 'package:dplyr':
-#> 
-#>     matches
 
 date()
-#> [1] "Wed Aug 31 17:44:45 2016"
+#> [1] "Wed Aug 31 17:47:25 2016"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================================================================================================
