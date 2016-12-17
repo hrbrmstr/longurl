@@ -4,10 +4,9 @@
 \name{longurl}
 \alias{longurl}
 \alias{longurl-package}
-\title{A package to work with the URL-Expander API}
+\title{Tools expand vectors of short URLs into long URLs}
 \description{
-Interface to the 'URL-Expander' API to expand vectors of short URLs
-with optional error checking and URL validation.
+Tools expand vectors of short URLs into long URLs
 }
 \author{
 Bob Rudis (bob@rud.is)

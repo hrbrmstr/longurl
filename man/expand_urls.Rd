@@ -2,35 +2,33 @@
 % Please edit documentation in R/longurl.r
 \name{expand_urls}
 \alias{expand_urls}
-\title{Expand a vector of (short) URLs using the URL-Expander service}
+\title{Expand a vector of (short) URLs using}
 \usage{
-expand_urls(urls_to_expand, check = FALSE, warn = TRUE,
-  .progress = interactive())
+expand_urls(urls_to_expand, warn = TRUE, agent = "longurl-r-package",
+  seconds = 2, .progress = interactive())
 }
 \arguments{
 \item{urls_to_expand}{character vector of URLs}
 
-\item{check}{run an extra \code{HEAD} request on the expanded URL to determine
-validity. This is an expensive operation, so recommended usage is to run
-this only on URLs that did not seem to expand.}
-
 \item{warn}{show any warnings (API or otherwise) as messages}
+
+\item{agent}{user agent to use (some sites switchup content based on user agents).
+Defaults to "\code{longurl-r-package}".}
+
+\item{seconds}{number of seconds to wait for a response until giving up. Cannot be <1ms.}
 
 \item{.progress}{display a progress bar (generally only useful in
 interactive sesions)}
 }
 \value{
-\code{data_frame} (compatible with \code{data.frame}) of results
-       with the orignial URLs in \code{orig_url} and expanded URLs in
-       \code{expanded_url})
+\code{tbl_df} (compatible with \code{data.frame}) of results
+       with the orignial URLs in \code{orig_url}, expanded URLs in
+       \code{expanded_url} and the HTTP \code{status_code} of the expanded URL. Completely
+       invalid URLs result in a \code{NA} value for \code{expanded_url} & \code{status_code}.
 }
 \description{
 Pass in a vector of URLs (ostensibly "short" URLs) and receive
-a \code{data_frame} of the original URLs and expanded URLs via the
-'URL-Expander' service.
-}
-\note{
-max 10,000 expansions per day
+a \code{data_frame} of the original URLs and expanded URLs
 }
 \examples{
 test_urls <- c("http://t.co/D4C7aWYIiA",
