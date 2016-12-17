@@ -1,7 +1,7 @@
 # longurl 0.3.0
 
 * No longer uses an API service
-* Returned `tbl_df` has an extra status code field
+* The returned `tbl_df` has an extra status code field
 
 # longurl 0.2.0
 

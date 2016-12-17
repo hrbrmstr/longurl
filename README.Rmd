@@ -24,15 +24,13 @@ longurl : Tools expand vectors of short URLs into long URLs.
 This does a bit more than [decode_short_url](https://github.com/geoffjentry/twitteR/blob/master/R/utils.R#L22-L31) from the [twitteR](https://github.com/geoffjentry/twitteR) package since it:
 
 - doesn't rely on a URL expansion API (anymore)
-- has an option for progress bars
+- has options for progress bars & display of warnings during URL checks
 - works with a vector of URLs
 - returns `tbl_df`s that include HTTP status code for final (expanded) URL
 
 The following functions are implemented:
 
-- `expand_urls`:	Expand a vector of (short) URLs
-
-The following data sets are included:
+- `expand_urls`: Expand a vector of (short) URLs
 
 ### Installation
 
