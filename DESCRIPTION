@@ -14,5 +14,6 @@ Suggests:
     testthat
 Imports:
     httr,
-    dplyr
+    dplyr,
+    purrr
 RoxygenNote: 5.0.1

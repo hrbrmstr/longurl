@@ -7,8 +7,9 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a "bug fix" release to swap out the back-end API service used to
-  expand short URLs since longurl.org is no longer a service.
+* This is a "bug fix" release with a complete re-thinking
+  of the packge. It no longer relies on third-party services
+  to do the heavy lifting. All work is done within R.
 
 ## Reverse dependencies
 
