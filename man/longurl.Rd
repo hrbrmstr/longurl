@@ -11,4 +11,3 @@ Tools expand vectors of short URLs into long URLs
 \author{
 Bob Rudis (bob@rud.is)
 }
-

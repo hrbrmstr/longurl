@@ -1,3 +1,8 @@
+# longurl 0.3.1
+
+* wrapped the call to `httr::warn_for_status()` with `purrr::safely()` to 
+  account for an issue reported on scraping LinkedIn from AWS.
+
 # longurl 0.3.0
 
 * No longer uses an API service

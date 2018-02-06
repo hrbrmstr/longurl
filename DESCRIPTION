@@ -1,13 +1,20 @@
 Package: longurl
-Title: Expand Short URLs
-Version: 0.3.0
-Authors@R: c(person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")))
-Description: Tools expand vectors of short URLs into long URLs. No API services are used,
-    which may mean that this operates more slowly than API services do (since they usually
-    cache results of expansions every user of the service performs). 
+Title: Expand Short 'URLs'
+Version: 0.3.1
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640"))
+  )
+Description: Tools are provided to expand vectors of short URLs into long 'URLs'. 
+    No 'API' services are used, which may mean that this operates more slowly than 
+    'API' services do (since they usually cache results of expansions that every 
+    user of the service requests). You can setup your own caching layer with the 
+    'memoise' package if you wish to have a speedup during single sessions or add 
+    larger dependencies, such as 'Redis', to gain a longer-term performance boost 
+    at the expense of added complexity.
 Maintainer: Bob Rudis <bob@rud.is>
-Depends:
-    R (>= 3.1.0)
+Depends: R (>= 3.2.0)
+Encoding: UTF-8
 License: MIT + file LICENSE
 LazyData: true
 Suggests:
@@ -16,4 +23,4 @@ Imports:
     httr,
     dplyr,
     purrr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1.9000

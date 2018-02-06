@@ -21,14 +21,13 @@ Defaults to "\code{longurl-r-package}".}
 interactive sesions)}
 }
 \value{
-\code{tbl_df} (compatible with \code{data.frame}) of results
-       with the orignial URLs in \code{orig_url}, expanded URLs in
-       \code{expanded_url} and the HTTP \code{status_code} of the expanded URL. Completely
-       invalid URLs result in a \code{NA} value for \code{expanded_url} & \code{status_code}.
+a tibble/data frame with the orignial URLs in \code{orig_url}, expanded URLs in
+\code{expanded_url} and the HTTP \code{status_code} of the expanded URL. Completely
+invalid URLs result in a \code{NA} value for \code{expanded_url} & \code{status_code}.
 }
 \description{
 Pass in a vector of URLs (ostensibly "short" URLs) and receive
-a \code{data_frame} of the original URLs and expanded URLs
+a data frame of the original URLs and expanded URLs
 }
 \examples{
 test_urls <- c("http://t.co/D4C7aWYIiA",
@@ -37,4 +36,3 @@ test_urls <- c("http://t.co/D4C7aWYIiA",
 big_urls <- expand_urls(test_urls)
 head(big_urls)
 }
-
