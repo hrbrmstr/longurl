@@ -19,7 +19,11 @@ knitr::opts_chunk$set(
 ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/longurl)
 
 
-longurl : Tools expand vectors of short URLs into long URLs.
+# longurl 
+
+Tools expand vectors of short URLs into long URLs.
+
+## Description
 
 This does a bit more than [decode_short_url](https://github.com/geoffjentry/twitteR/blob/master/R/utils.R#L22-L31) from the [twitteR](https://github.com/geoffjentry/twitteR) package since it:
 
@@ -28,11 +32,21 @@ This does a bit more than [decode_short_url](https://github.com/geoffjentry/twit
 - works with a vector of URLs
 - returns `tbl_df`s that include HTTP status code for final (expanded) URL
 
+Tools are provided to expand vectors of short URLs into long 'URLs'. 
+No 'API' services are used, which may mean that this operates more slowly than 
+'API' services do (since they usually cache results of expansions that every 
+user of the service requests). You can setup your own caching layer with the 
+'memoise' package if you wish to have a speedup during single sessions or add 
+larger dependencies, such as 'Redis', to gain a longer-term performance boost 
+at the expense of added complexity.
+
+## What's inside the tin?
+
 The following functions are implemented:
 
 - `expand_urls`: Expand a vector of (short) URLs
 
-### Installation
+## Installation
 
 ```{r install, eval=FALSE, message=FALSE, warning=FALSE}
 devtools::install_github("hrbrmstr/longurl")
@@ -44,7 +58,7 @@ install.packages("longurl")
 options(width=200)
 ```
 
-### Usage
+## Usage
 
 ```{r usage, message=FALSE, warning=FALSE}
 library(longurl)
