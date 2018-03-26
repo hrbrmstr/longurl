@@ -59,7 +59,7 @@ library(dplyr)
 
 # current verison
 packageVersion("longurl")
-#> [1] '0.3.1'
+#> [1] '0.3.2'
 
 test_urls <- c("http://t.co/D4C7aWYIiA",
                "1.usa.gov/1J6GNoW",
@@ -76,7 +76,7 @@ expand_urls(test_urls) %>%
 
 | orig\_url                 | status\_code | expanded\_url                                                                                              |
 | :------------------------ | -----------: | :--------------------------------------------------------------------------------------------------------- |
-| <http://t.co/D4C7aWYIiA>  |          200 | <https://www.wired.com/2015/06/airlines-security-hole-grounded-polish-planes/>                             |
+| <http://t.co/D4C7aWYIiA>  |           NA | NA                                                                                                         |
 | 1.usa.gov/1J6GNoW         |          410 | <https://www.democrats.senate.gov/2015/06/22/schedule-for-monday-june-22-2015/>                            |
 | ift.tt/1L2Llfr            |          200 | <https://ifttt.com/applet_embeds/299814p/image?width=660&height=340>                                       |
 | bit.ly/1GPr5w5            |          200 | <https://s3.amazonaws.com/features.ifttt.com/blog_images/Channels/Weebly+final+banner+with+IFTTT+logo.png> |
@@ -91,22 +91,20 @@ library(longurl)
 library(testthat)
 
 date()
-#> [1] "Tue Feb  6 13:55:50 2018"
+#> [1] "Mon Mar 26 16:30:03 2018"
 
 test_dir("tests/")
 #> ✔ | OK F W S | Context
-#> ══ testthat results  ══════════════════════════════════════════════════════════════════════════════
+#> ══ testthat results  ═══════════════════════════════════════════════════════════════
 #> OK: 4 SKIPPED: 0 FAILED: 0
 #> 
-#> ══ Results ════════════════════════════════════════════════════════════════════════════════════════
-#> Duration: 3.1 s
+#> ══ Results ═════════════════════════════════════════════════════════════════════════
+#> Duration: 5.4 s
 #> 
 #> OK:       0
 #> Failed:   0
 #> Warnings: 0
 #> Skipped:  0
-#> 
-#> Nice code.
 ```
 
 ### Code of Conduct
