@@ -32,6 +32,8 @@ expand_urls <- function(urls_to_expand,
 
   if (.progress) pb <- progress_estimated(length(urls_to_expand))
 
+  urls_to_expand <- as.character(urls_to_expand)
+
   purrr::map_df(urls_to_expand, function(x) {
 
     if (.progress) pb$tick()$print()

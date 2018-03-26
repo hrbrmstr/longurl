@@ -5,7 +5,7 @@
 \title{Expand a vector of (short) URLs using}
 \usage{
 expand_urls(urls_to_expand, warn = TRUE, agent = "longurl-r-package",
-  seconds = 2, .progress = interactive())
+  seconds = 5, .progress = interactive())
 }
 \arguments{
 \item{urls_to_expand}{character vector of URLs}

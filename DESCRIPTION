@@ -1,9 +1,10 @@
 Package: longurl
 Title: Expand Short 'URLs'
-Version: 0.3.1
+Version: 0.3.2
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
-           comment = c(ORCID = "0000-0001-5670-2640"))
+           comment = c(ORCID = "0000-0001-5670-2640")),
+    person("John", "Coene", role = "ctb", comment = "Issue #4")
   )
 Description: Tools are provided to expand vectors of short URLs into long 'URLs'. 
     No 'API' services are used, which may mean that this operates more slowly than 

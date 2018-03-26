@@ -1,3 +1,7 @@
+# longurl 0.3.2
+
+* Ensure input is character before processing. (@JohnCoene, #4)
+
 # longurl 0.3.1
 
 * wrapped the call to `httr::warn_for_status()` with `purrr::safely()` to 
