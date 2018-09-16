@@ -5,7 +5,7 @@
 \title{Expand a vector of (short) URLs using}
 \usage{
 expand_urls(urls_to_expand, warn = TRUE, agent = "longurl-r-package",
-  seconds = 5, .progress = interactive())
+  seconds = 5, .progress = FALSE)
 }
 \arguments{
 \item{urls_to_expand}{character vector of URLs}
@@ -17,8 +17,7 @@ Defaults to "\code{longurl-r-package}".}
 
 \item{seconds}{number of seconds to wait for a response until giving up. Cannot be <1ms.}
 
-\item{.progress}{display a progress bar (generally only useful in
-interactive sesions)}
+\item{.progress}{kept for legacy functionality but ignored}
 }
 \value{
 a tibble/data frame with the orignial URLs in \code{orig_url}, expanded URLs in

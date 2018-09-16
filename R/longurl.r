@@ -1,5 +1,5 @@
-s_HEAD <- purrr::safely(httr::HEAD)
-s_STATUS <- purrr::safely(httr::warn_for_status)
+s_HEAD <- safely(httr::HEAD)
+s_STATUS <- safely(httr::warn_for_status)
 
 #' Expand a vector of (short) URLs using
 #'
@@ -12,8 +12,7 @@ s_STATUS <- purrr::safely(httr::warn_for_status)
 #' @param agent user agent to use (some sites switchup content based on user agents).
 #'        Defaults to "`longurl-r-package`".
 #' @param seconds number of seconds to wait for a response until giving up. Cannot be <1ms.
-#' @param .progress display a progress bar (generally only useful in
-#'        interactive sesions)
+#' @param .progress kept for legacy functionality but ignored
 #' @return a tibble/data frame with the orignial URLs in `orig_url`, expanded URLs in
 #'        `expanded_url` and the HTTP `status_code` of the expanded URL. Completely
 #'        invalid URLs result in a `NA` value for `expanded_url` & `status_code`.
@@ -28,31 +27,46 @@ expand_urls <- function(urls_to_expand,
                         warn = TRUE,
                         agent = "longurl-r-package",
                         seconds = 5,
-                        .progress = interactive()) {
-
-  if (.progress) pb <- progress_estimated(length(urls_to_expand))
+                        .progress = FALSE) {
 
   urls_to_expand <- as.character(urls_to_expand)
 
-  purrr::map_df(urls_to_expand, function(x) {
-
-    if (.progress) pb$tick()$print()
+  lapply(urls_to_expand, function(x) {
 
     res <- s_HEAD(x, httr::user_agent(agent), httr::timeout(seconds))
 
     if (is.null(res$result)) {
       warning(sprintf("Invalid URL: [%s]", x))
-      data_frame(orig_url = x, expanded_url = NA, status_code = NA)
+      data.frame(
+        orig_url = x,
+        expanded_url = NA_character_,
+        status_code = NA_character_,
+        stringsAsFactors = FALSE
+      )
     } else {
       sres <- s_STATUS(res$result)
       if (is.null(sres$result)) {
         warning("httr::warn_for_status() on HEAD request result")
-        data_frame(orig_url = x, expanded_url = NA, status_code = NA)
+      data.frame(
+        orig_url = x,
+        expanded_url = NA_character_,
+        status_code = NA_character_,
+        stringsAsFactors = FALSE
+      )
       } else {
-        data_frame(orig_url = x, expanded_url = res$result$url, status_code = res$result$status_code)
+        data.frame(
+          orig_url = x,
+          expanded_url = res$result$url,
+          status_code = res$result$status_code,
+          stringsAsFactors = FALSE
+        )
       }
     }
 
-  })
+  }) -> xlst
+
+  xdf <- do.call(rbind.data.frame, xlst)
+  class(xdf) <- c("tbl_df", "tbl", "data.frame")
+  xdf
 
 }
