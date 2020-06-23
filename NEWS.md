@@ -1,3 +1,7 @@
+# longurl 0.3.3
+
+* Switch to {tinytest}
+
 # longurl 0.3.2
 
 * Ensure input is character before processing. (@JohnCoene, #4)
