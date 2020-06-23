@@ -6,7 +6,6 @@ s_STATUS <- safely(httr::warn_for_status)
 #' Pass in a vector of URLs (ostensibly "short" URLs) and receive
 #' a data frame of the original URLs and expanded URLs
 #'
-#' @md
 #' @param urls_to_expand character vector of URLs
 #' @param warn show any warnings (API or otherwise) as messages
 #' @param agent user agent to use (some sites switchup content based on user agents).

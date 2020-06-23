@@ -5,7 +5,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-17%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
 [![Linux build
 Status](https://travis-ci.org/hrbrmstr/longurl.svg?branch=master)](https://travis-ci.org/hrbrmstr/longurl)
 [![Coverage
@@ -30,8 +30,9 @@ than ‘API’ services do (since they usually cache results of expansions
 that every user of the service requests). You can setup your own caching
 layer with the ‘memoise’ package if you wish to have a speedup during
 single sessions or add larger dependencies, such as ‘Redis’, to gain a
-longer-term performance boost at the expense of added complexity. \#\#
-What’s Inside The Tin
+longer-term performance boost at the expense of added complexity.
+
+## What’s Inside The Tin
 
 The following functions are implemented:
 
@@ -40,6 +41,12 @@ The following functions are implemented:
 ## Installation
 
 ``` r
+install.packages("longurl", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
+# or
+remotes::install_git("https://git.rud.is/hrbrmstr/longurl.git")
+# or
+remotes::install_git("https://git.sr.ht/~hrbrmstr/longurl")
+# or
 remotes::install_gitlab("hrbrmstr/longurl")
 # or
 remotes::install_github("hrbrmstr/longurl")
@@ -89,8 +96,8 @@ expand_urls(test_urls) %>%
 
 | Lang | \# Files | (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | --: | --: | ---: | ----------: | ---: | -------: | ---: |
-| R    |        4 | 0.8 | 110 | 0.84 |          20 | 0.56 |       44 | 0.62 |
-| Rmd  |        1 | 0.2 |  21 | 0.16 |          16 | 0.44 |       27 | 0.38 |
+| R    |        4 | 0.8 | 110 | 0.84 |          20 | 0.54 |       44 | 0.62 |
+| Rmd  |        1 | 0.2 |  21 | 0.16 |          17 | 0.46 |       27 | 0.38 |
 
 ## Code of Conduct
 
